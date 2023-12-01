@@ -24,12 +24,12 @@
             android:id="@+id/img_twitter_white_background"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:padding="2dp"
+            android:adjustViewBounds="true"
             android:background="@drawable/selector_shape"
             android:backgroundTintMode="multiply"
             android:clickable="true"
             android:focusable="true"
-            android:adjustViewBounds="true"
+            android:padding="2dp"
             android:src="@drawable/ic_twitter_white_background"
             app:layout_constraintBottom_toTopOf="@id/img_zommed_twitter_white_background"
             app:layout_constraintEnd_toStartOf="@+id/img_twitter_black_background"
@@ -46,9 +46,9 @@
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintBottom_toTopOf="@id/img_zommed_twitter_black_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toTopOf="@id/img_zommed_twitter_black_background"
             app:layout_constraintStart_toEndOf="@+id/img_twitter_white_background"
             app:layout_constraintTop_toBottomOf="@+id/txt_local" />
 
@@ -56,12 +56,12 @@
             android:id="@+id/img_zommed_twitter_white_background"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="4dp"
             android:adjustViewBounds="true"
             android:background="@drawable/selector_shape"
             android:clickable="true"
             android:focusable="true"
             android:padding="10dp"
-            android:layout_marginTop="4dp"
             android:src="@drawable/ic_zommed_twitter_white_background"
             app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
             app:layout_constraintEnd_toEndOf="@+id/img_twitter_white_background"
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.25"/>
+            app:layout_constraintGuide_percent="0.25" />
 
         <!--        Glide Components-->
 
@@ -126,11 +126,11 @@
             android:background="@drawable/selector_shape"
             android:clickable="true"
             android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@id/img_zommed_twitter_black_background_glide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/img_twitter_white_background_glide"
-            app:layout_constraintTop_toBottomOf="@+id/txt_glide"
-            app:layout_constraintBottom_toTopOf="@id/img_zommed_twitter_black_background_glide"/>
+            app:layout_constraintTop_toBottomOf="@+id/txt_glide" />
 
         <ImageView
             android:id="@+id/img_zommed_twitter_white_background_glide"
@@ -166,6 +166,164 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5"/>
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <TextView
+            android:id="@+id/txt_chain_packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="packed"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_2" />
+
+        <ImageView
+            android:id="@+id/img_twitter_white_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/selector_shape"
+            android:backgroundTintMode="multiply"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/ic_twitter_white_background"
+            app:layout_constraintEnd_toStartOf="@id/img_twitter_black_2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_packed" />
+
+        <ImageView
+            android:id="@+id/img_twitter_black_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintEnd_toStartOf="@id/img_twitter_3"
+            app:layout_constraintStart_toEndOf="@+id/img_twitter_white_1"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_packed" />
+
+        <ImageView
+            android:id="@+id/img_spread_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_twitter_spread_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_spread" />
+
+        <TextView
+            android:id="@+id/txt_chain_spread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="spread"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_twitter_black_2" />
+
+        <ImageView
+            android:id="@+id/img_twitter_spread_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/ic_twitter_white_background"
+            app:layout_constraintEnd_toStartOf="@id/img_twitter_spread_2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_spread" />
+
+        <ImageView
+            android:id="@+id/img_twitter_spread_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintEnd_toStartOf="@id/img_spread_3"
+            app:layout_constraintStart_toEndOf="@+id/img_twitter_spread_1"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_spread" />
+
+        <ImageView
+            android:id="@+id/img_twitter_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_twitter_black_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_packed" />
+
+        <TextView
+            android:id="@+id/txt_chain_spread_inside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Spread Inside"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_twitter_spread_2" />
+
+        <ImageView
+            android:id="@+id/img_twitter_spread_inside_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/selector_shape"
+            android:backgroundTintMode="multiply"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_twitter_white_background"
+            app:layout_constraintEnd_toStartOf="@id/img_twitter_spread_inside_2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_spread_inside" />
+
+        <ImageView
+            android:id="@+id/img_twitter_spread_inside_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintEnd_toStartOf="@id/img_twitter_spread_inside_3"
+            app:layout_constraintStart_toEndOf="@+id/img_twitter_spread_inside_1"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_spread_inside" />
+
+        <ImageView
+            android:id="@+id/img_twitter_spread_inside_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_twitrer_black_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_twitter_spread_inside_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_chain_spread_inside" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
